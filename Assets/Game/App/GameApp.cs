@@ -5,12 +5,12 @@ using SilverCat;
 
 namespace Fountain {
 
-    public class GameApp : AppBase {
-        protected override void OnAppPreCreate() {
+    public sealed class GameApp : AppBase {
+        protected override void OnAppPreLaunch() {
 
         }
 
-        protected override void OnAppCreate() {
+        protected override void OnAppLaunch() {
             UIManager.Open<PressAnyKeyView>(UILayer.BaseLayer, (Action)OnOpenPressAnyKeyView);
         }
 

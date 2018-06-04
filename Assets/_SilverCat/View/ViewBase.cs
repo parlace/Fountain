@@ -209,7 +209,7 @@ namespace SilverCat {
         private void DetachHost() {
             if (_hostObject != null) {
                 if (_canDestroyHost) {
-                    GameObjectFinder.FinderDetach(_objFinder);
+                    GameObjectFinder.DestroyFinder(_objFinder);
                     UnityEngine.Object.Destroy(_hostObject);
                 }
                 _view = null;
